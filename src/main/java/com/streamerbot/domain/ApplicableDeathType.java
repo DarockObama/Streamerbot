@@ -4,5 +4,5 @@ public enum ApplicableDeathType {
     SAFE,
     SPECIAL,
     RESURRECTION,
-    DANGEROUS;
+    DANGEROUS
 }
