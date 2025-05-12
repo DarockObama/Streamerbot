@@ -1,48 +1,50 @@
 package com.streamerbot;
-
 import com.google.inject.Provides;
 import javax.inject.Inject;
+import com.streamerbot.triggers.DeathTrigger;
 import lombok.extern.slf4j.Slf4j;
-import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
-import net.runelite.api.GameState;
-import net.runelite.api.events.GameStateChanged;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.api.events.ActorDeath;
+
 
 @Slf4j
 @PluginDescriptor(
-	name = "Streamerbot"
+		name = "Streamerbot",
+		description = "Lets in-game events trigger Streamerbot actions",
+		tags = {"streamer", "events", "trigger", "OBS", "Streamerbot", "Twitch"}
 )
-public class StreamerbotPlugin extends Plugin
-{
+
+public class StreamerbotPlugin extends Plugin {
 	@Inject
 	private Client client;
 
 	@Inject
 	private StreamerbotConfig config;
 
-	@Override
-	protected void startUp() throws Exception
-	{
-		log.info("Example started!");
+	@Inject
+	DeathTrigger deathTrigger;
+
+    public StreamerbotPlugin() {
+    }
+
+    @Override
+	protected void startUp() {
+		log.info("Streamerbot started!");
 	}
 
 	@Override
-	protected void shutDown() throws Exception
+	protected void shutDown()
 	{
-		log.info("Example stopped!");
+		log.info("Streamerbot stopped!");
 	}
 
 	@Subscribe
-	public void onGameStateChanged(GameStateChanged gameStateChanged)
-	{
-		if (gameStateChanged.getGameState() == GameState.LOGGED_IN)
-		{
-			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Example says " + config.greeting(), null);
-		}
+	public void onActorDeath(ActorDeath actorDeath) {
+		deathTrigger.onActorDeath(actorDeath);
 	}
 
 	@Provides
