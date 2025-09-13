@@ -2,14 +2,11 @@ package com.streamerbot.domain;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public enum AreaType {
-    BOSSES("Bosses"),
-    CITIES("Cities"),
-    DUNGEONS("Dungeons"),
-    MINIGAMES("Minigames"),
-    RAIDS("Raids"),
-    REGIONS("Regions"),
-    UNKNOWN("Unknown");
+public enum DeathType {
+    DANGEROUS("Dangerous"),
+    SAFE_FOR_SOLO_HCIM("Safe for Solo HCIM"),
+    SAFE_FOR_HCGIM("Safe for HCGIM"),
+    RESURRECTION("Resurrection");
 
     private final String name;
 

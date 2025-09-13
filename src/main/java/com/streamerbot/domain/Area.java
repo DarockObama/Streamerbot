@@ -28,15 +28,15 @@ package com.streamerbot.domain;
  */
 
 import com.google.common.collect.ImmutableMap;
+
 import java.util.Map;
-import javax.annotation.Nullable;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum Area
-{
+public enum Area {
     // Bosses
     BOSS_ABYSSAL_SIRE("Abyssal Sire", AreaType.BOSSES, 11851, 11850, 12363, 12362),
     BOSS_ARAXXOR("Araxxor", AreaType.BOSSES, 14489),
@@ -58,7 +58,7 @@ public enum Area
     BOSS_NIGHTMARE("Nightmare of Ashihama", AreaType.BOSSES, 15515),
     BOSS_PHANTOM_MUSPAH("Phantom Muspah", AreaType.BOSSES, 11330),
     BOSS_SARACHNIS("Sarachnis", AreaType.BOSSES, 7322),
-    BOSS_SKOTIZO("Skotizo", AreaType.BOSSES, 6810),
+    BOSS_SKOTIZO("Skotizo", AreaType.BOSSES, 9048),
     BOSS_SMOKE_DEVIL("Thermonuclear smoke devil", AreaType.BOSSES, 9363, 9619),
     BOSS_TEMPOROSS("Tempoross", AreaType.BOSSES, 12078),
     BOSS_THE_LEVIATHAN("The Leviathan", AreaType.BOSSES, 8291),
@@ -66,85 +66,86 @@ public enum Area
     BOSS_THE_WHISPERER("The Whisperer", AreaType.BOSSES, 10595),
     BOSS_VARDORVIS("Vardorvis", AreaType.BOSSES, 4405),
     BOSS_VORKATH("Vorkath", AreaType.BOSSES, 9023),
+    BOSS_YAMA("Yama", AreaType.BOSSES, 6045),
     BOSS_WINTERTODT("Wintertodt", AreaType.BOSSES, 6462),
     BOSS_ZALCANO("Zalcano", AreaType.BOSSES, 12126),
     BOSS_ZULRAH("Zulrah", AreaType.BOSSES, 9007),
 
     // Cities
-    CITY_AL_KHARID("Al Kharid" , AreaType.CITIES, 13105, 13106),
-    CITY_ARCEUUS_HOUSE("Arceuus" , AreaType.CITIES, 6458, 6459, 6460, 6714, 6715),
-    CITY_ARDOUGNE("Ardougne" , AreaType.CITIES, 9779, 9780, 10035, 10036, 10291, 10292, 10547, 10548),
-    CITY_BANDIT_CAMP("Bandit Camp" , AreaType.CITIES, 12590),
+    CITY_AL_KHARID("Al Kharid", AreaType.CITIES, 13105, 13106),
+    CITY_ARCEUUS_HOUSE("Arceuus", AreaType.CITIES, 6458, 6459, 6460, 6714, 6715),
+    CITY_ARDOUGNE("Ardougne", AreaType.CITIES, 9779, 9780, 10035, 10036, 10291, 10292, 10547, 10548),
+    CITY_BANDIT_CAMP("Bandit Camp", AreaType.CITIES, 12590),
     CITY_BARBARIAN_OUTPOST("Barbarian Outpost", AreaType.CITIES, 10039),
-    CITY_BARBARIAN_VILLAGE("Barbarian Village" , AreaType.CITIES, 12341),
-    CITY_BEDABIN_CAMP("Bedabin Camp" , AreaType.CITIES, 12591),
-    CITY_BRIMHAVEN("Brimhaven" , AreaType.CITIES, 11057, 11058),
-    CITY_BURGH_DE_ROTT("Burgh de Rott" , AreaType.CITIES, 13874, 13873, 14130, 14129),
-    CITY_BURTHORPE("Burthorpe" , AreaType.CITIES, 11319, 11575),
-    CITY_CAM_TORUM("Cam Torum" , AreaType.CITIES, 5525, 5780, 5781, 6037),
-    CITY_CANIFIS("Canifis" , AreaType.CITIES, 13878),
-    CITY_CATHERBY("Catherby" , AreaType.CITIES, 11317, 11318, 11061),
-    CITY_CIVITAS_ILLA_FORTIS("Civitas Illa Fortis" , AreaType.CITIES, 6448, 6449, 6704, 6705, 6960, 6961),
-    CITY_CORSAIR_COVE("Corsair Cove" , AreaType.CITIES, 10028, 10284),
+    CITY_BARBARIAN_VILLAGE("Barbarian Village", AreaType.CITIES, 12341),
+    CITY_BEDABIN_CAMP("Bedabin Camp", AreaType.CITIES, 12591),
+    CITY_BRIMHAVEN("Brimhaven", AreaType.CITIES, 11057, 11058),
+    CITY_BURGH_DE_ROTT("Burgh de Rott", AreaType.CITIES, 13874, 13873, 14130, 14129),
+    CITY_BURTHORPE("Burthorpe", AreaType.CITIES, 11319, 11575),
+    CITY_CAM_TORUM("Cam Torum", AreaType.CITIES, 5525, 5780, 5781, 6037),
+    CITY_CANIFIS("Canifis", AreaType.CITIES, 13878),
+    CITY_CATHERBY("Catherby", AreaType.CITIES, 11317, 11318, 11061),
+    CITY_CIVITAS_ILLA_FORTIS("Civitas Illa Fortis", AreaType.CITIES, 6448, 6449, 6704, 6705, 6960, 6961),
+    CITY_CORSAIR_COVE("Corsair Cove", AreaType.CITIES, 10028, 10284),
     CITY_DARKMEYER("Darkmeyer", AreaType.CITIES, 14388, 14644),
-    CITY_DORGESH_KAAN("Dorgesh-Kaan" , AreaType.CITIES, 10835, 10834),
-    CITY_DRAYNOR("Draynor" , AreaType.CITIES, 12338, 12339),
-    CITY_EDGEVILLE("Edgeville" , AreaType.CITIES, 12342),
-    CITY_ENTRANA("Entrana" , AreaType.CITIES, 11060, 11316),
+    CITY_DORGESH_KAAN("Dorgesh-Kaan", AreaType.CITIES, 10835, 10834),
+    CITY_DRAYNOR("Draynor", AreaType.CITIES, 12338, 12339),
+    CITY_EDGEVILLE("Edgeville", AreaType.CITIES, 12342),
+    CITY_ENTRANA("Entrana", AreaType.CITIES, 11060, 11316),
     CITY_ETCETERIA("Etceteria", AreaType.CITIES, 10300),
-    CITY_FALADOR("Falador" , AreaType.CITIES, 11828, 11572, 11827, 12084),
-    CITY_GUTANOTH("Gu'Tanoth" , AreaType.CITIES, 10031),
+    CITY_FALADOR("Falador", AreaType.CITIES, 11828, 11572, 11827, 12084),
+    CITY_GUTANOTH("Gu'Tanoth", AreaType.CITIES, 10031),
     CITY_GWENITH("Gwenith", AreaType.CITIES, 8757),
-    CITY_HOSIDIUS_HOUSE("Hosidius" , AreaType.CITIES, 6710, 6711, 6712, 6455, 6456, 6966, 6967, 6968, 7221, 7223, 7224, 7478, 7479),
-    CITY_JATIZSO("Jatizso" , AreaType.CITIES, 9531),
-    CITY_KELDAGRIM("Keldagrim" , AreaType.CITIES, 11423, 11422, 11679, 11678),
+    CITY_HOSIDIUS_HOUSE("Hosidius", AreaType.CITIES, 6710, 6711, 6712, 6455, 6456, 6966, 6967, 6968, 7221, 7223, 7224, 7478, 7479),
+    CITY_JATIZSO("Jatizso", AreaType.CITIES, 9531),
+    CITY_KELDAGRIM("Keldagrim", AreaType.CITIES, 11423, 11422, 11679, 11678),
     CITY_LANDS_END("Land's End", AreaType.CITIES, 5941),
     CITY_LASSAR_UNDERCITY("Lassar Undercity", AreaType.CITIES, 9314, 9315, 9316, 9571, 9572, 9828, 10338, 10339, 10340, 10596, 10852),
-    CITY_LLETYA("Lletya" , AreaType.CITIES, 9265, 11103),
-    CITY_LOVAKENGJ_HOUSE("Lovakengj" , AreaType.CITIES, 5692, 5691, 5947, 6203, 6202, 5690, 5946),
-    CITY_LUMBRIDGE("Lumbridge" , AreaType.CITIES, 12850),
-    CITY_LUNAR_ISLE("Lunar Isle" , AreaType.CITIES, 8253, 8252, 8509, 8508),
+    CITY_LLETYA("Lletya", AreaType.CITIES, 9265, 11103),
+    CITY_LOVAKENGJ_HOUSE("Lovakengj", AreaType.CITIES, 5692, 5691, 5947, 6203, 6202, 5690, 5946),
+    CITY_LUMBRIDGE("Lumbridge", AreaType.CITIES, 12850),
+    CITY_LUNAR_ISLE("Lunar Isle", AreaType.CITIES, 8253, 8252, 8509, 8508),
     CITY_MARIM("Marim", AreaType.REGIONS, 11051),
-    CITY_MEIYERDITCH("Meiyerditch" , AreaType.CITIES, 14132, 14387, 14386, 14385),
+    CITY_MEIYERDITCH("Meiyerditch", AreaType.CITIES, 14132, 14387, 14386, 14385),
     CITY_MENAPHOS("Menaphos", AreaType.CITIES, 12843),
-    CITY_MISCELLANIA("Miscellania" , AreaType.CITIES, 10044),
-    CITY_MOR_UL_REK("Mor Ul Rek" , AreaType.CITIES, 9808, 9807, 10064, 10063),
-    CITY_MORTTON("Mort'ton" , AreaType.CITIES, 13875),
-    CITY_MOS_LE_HARMLESS("Mos Le'Harmless" , AreaType.CITIES, 14637, 14638, 14639, 14894, 14895, 15151, 15406, 15407),
+    CITY_MISCELLANIA("Miscellania", AreaType.CITIES, 10044),
+    CITY_MOR_UL_REK("Mor Ul Rek", AreaType.CITIES, 9808, 9807, 10064, 10063),
+    CITY_MORTTON("Mort'ton", AreaType.CITIES, 13875),
+    CITY_MOS_LE_HARMLESS("Mos Le'Harmless", AreaType.CITIES, 14637, 14638, 14639, 14894, 14895, 15151, 15406, 15407),
     CITY_MOUNT_KARUULM("Mount Karuulm", AreaType.CITIES, 5179, 4923, 5180),
     CITY_MOUNTAIN_CAMP("Mountain Camp", AreaType.CITIES, 11065),
     CITY_MYNYDD("Mynydd", AreaType.CITIES, 8501),
-    CITY_NARDAH("Nardah" , AreaType.CITIES, 13613),
-    CITY_NEITIZNOT("Neitiznot" , AreaType.CITIES, 9275),
-    CITY_PISCARILIUS_HOUSE("Port Piscarilius" , AreaType.CITIES, 6969, 6971, 7227, 6970, 7225, 7226),
-    CITY_PISCATORIS("Piscatoris" , AreaType.CITIES, 9273),
-    CITY_POLLNIVNEACH("Pollnivneach" , AreaType.CITIES, 13358),
-    CITY_PORT_KHAZARD("Port Khazard" , AreaType.CITIES, 10545),
-    CITY_PORT_PHASMATYS("Port Phasmatys" , AreaType.CITIES, 14646),
-    CITY_PORT_SARIM("Port Sarim" , AreaType.CITIES, 12081, 12082),
+    CITY_NARDAH("Nardah", AreaType.CITIES, 13613),
+    CITY_NEITIZNOT("Neitiznot", AreaType.CITIES, 9275),
+    CITY_PISCARILIUS_HOUSE("Port Piscarilius", AreaType.CITIES, 6969, 6971, 7227, 6970, 7225, 7226),
+    CITY_PISCATORIS("Piscatoris", AreaType.CITIES, 9273),
+    CITY_POLLNIVNEACH("Pollnivneach", AreaType.CITIES, 13358),
+    CITY_PORT_KHAZARD("Port Khazard", AreaType.CITIES, 10545),
+    CITY_PORT_PHASMATYS("Port Phasmatys", AreaType.CITIES, 14646),
+    CITY_PORT_SARIM("Port Sarim", AreaType.CITIES, 12081, 12082),
     CITY_PRIFDDINAS("Prifddinas", AreaType.CITIES, 8499, 8500, 8755, 8756, 9011, 9012, 9013, 12894, 12895, 13150, 13151),
-    CITY_RELLEKKA("Rellekka" , AreaType.CITIES, 10297, 10553),
-    CITY_RIMMINGTON("Rimmington" , AreaType.CITIES, 11826, 11570),
-    CITY_SEERS_VILLAGE("Seers' Village" , AreaType.CITIES, 10806),
-    CITY_SHAYZIEN_HOUSE("Shayzien" , AreaType.CITIES, 5944, 5943, 6200, 6199, 5686, 5687, 5688, 5689, 5945),
-    CITY_SHILO_VILLAGE("Shilo Village" , AreaType.CITIES, 11310),
+    CITY_RELLEKKA("Rellekka", AreaType.CITIES, 10297, 10553),
+    CITY_RIMMINGTON("Rimmington", AreaType.CITIES, 11826, 11570),
+    CITY_SEERS_VILLAGE("Seers' Village", AreaType.CITIES, 10806),
+    CITY_SHAYZIEN_HOUSE("Shayzien", AreaType.CITIES, 5944, 5943, 6200, 6199, 5686, 5687, 5688, 5689, 5945),
+    CITY_SHILO_VILLAGE("Shilo Village", AreaType.CITIES, 11310),
     CITY_SLEPE("Slepe", AreaType.CITIES, 14643, 14899, 14900, 14901),
-    CITY_SOPHANEM("Sophanem" , AreaType.CITIES, 13099),
-    CITY_TAI_BWO_WANNAI("Tai Bwo Wannai" , AreaType.CITIES, 11056, 11055),
-    CITY_TAVERLEY("Taverley" , AreaType.CITIES, 11574, 11573),
-    CITY_TREE_GNOME_STRONGHOLD("Tree Gnome Stronghold" , AreaType.CITIES, 9525, 9526, 9782, 9781),
-    CITY_TREE_GNOME_VILLAGE("Tree Gnome Village" , AreaType.CITIES, 10033),
-    CITY_TROLL_STRONGHOLD("Troll Stronghold" , AreaType.CITIES, 11321, 11421),
-    CITY_UZER("Uzer" , AreaType.CITIES, 13872),
+    CITY_SOPHANEM("Sophanem", AreaType.CITIES, 13099),
+    CITY_TAI_BWO_WANNAI("Tai Bwo Wannai", AreaType.CITIES, 11056, 11055),
+    CITY_TAVERLEY("Taverley", AreaType.CITIES, 11574, 11573),
+    CITY_TREE_GNOME_STRONGHOLD("Tree Gnome Stronghold", AreaType.CITIES, 9525, 9526, 9782, 9781),
+    CITY_TREE_GNOME_VILLAGE("Tree Gnome Village", AreaType.CITIES, 10033),
+    CITY_TROLL_STRONGHOLD("Troll Stronghold", AreaType.CITIES, 11321, 11421),
+    CITY_UZER("Uzer", AreaType.CITIES, 13872),
     CITY_UZER_OASIS("Uzer Oasis", AreaType.CITIES, 13871),
-    CITY_VARROCK("Varrock" , AreaType.CITIES, 12596, 12597, 12852, 12853, 12854, 13108, 13109, 13110),
+    CITY_VARROCK("Varrock", AreaType.CITIES, 12596, 12597, 12852, 12853, 12854, 13108, 13109, 13110),
     CITY_VER_SINHAZA("Ver Sinhaza", AreaType.CITIES, 14642),
     CITY_VOID_OUTPOST("Void Knights' Outpost", AreaType.CITIES, 10537),
     CITY_WEISS("Weiss", AreaType.CITIES, 11325, 11581),
-    CITY_WITCHHAVEN("Witchaven" , AreaType.CITIES, 10803),
-    CITY_YANILLE("Yanille" , AreaType.CITIES, 10288, 10032),
-    CITY_ZANARIS("Zanaris" , AreaType.CITIES, 9285, 9541, 9540, 9797),
-    CITY_ZULANDRA("Zul-Andra" , AreaType.CITIES, 8495, 8751),
+    CITY_WITCHHAVEN("Witchaven", AreaType.CITIES, 10803),
+    CITY_YANILLE("Yanille", AreaType.CITIES, 10288, 10032),
+    CITY_ZANARIS("Zanaris", AreaType.CITIES, 9285, 9541, 9540, 9797),
+    CITY_ZULANDRA("Zul-Andra", AreaType.CITIES, 8495, 8751),
 
     // Dungeons
     DUNGEON_ABANDONED_MINE("Abandoned Mine", AreaType.DUNGEONS, 13618, 13718, 11079, 11078, 11077, 10823, 10822, 10821),
@@ -265,46 +266,48 @@ public enum Area
 
     // Minigames
     MG_ARDOUGNE_RAT_PITS("Ardougne Rat Pits", AreaType.MINIGAMES, 10646),
-    MG_BARBARIAN_ASSAULT("Barbarian Assault", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 7508, 7509, 10322),
+    MG_BARBARIAN_ASSAULT("Barbarian Assault", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM, 7508, 7509, 10322),
     MG_BARROWS("Barrows", AreaType.MINIGAMES, 14131, 14231),
     MG_BLAST_FURNACE("Blast Furnace", AreaType.MINIGAMES, 7757),
     MG_BRIMHAVEN_AGILITY_ARENA("Brimhaven Agility Arena", AreaType.MINIGAMES, 11157),
+    MG_BOUNTY_HUNTER("Bounty Hunter", AreaType.MINIGAMES, 13374, 13375, 13376, 13630, 13631, 13632, 13886, 13887, 13888),
     MG_BURTHORPE_GAMES_ROOM("Burthorpe Games Room", AreaType.MINIGAMES, 8781),
-    MG_CASTLE_WARS("Castle Wars", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 9520, 9620),
-    MG_CLAN_WARS("Clan Wars", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 12621, 12622, 12623, 13130, 13131, 13133, 13134, 13135, 13386, 13387, 13390, 13641, 13642, 13643, 13644, 13645, 13646, 13647, 13899, 13900, 14155, 14156),
-    MG_PVP_ARENA("PvP Arena", AreaType.MINIGAMES, 13362, 13363),
+    MG_CASTLE_WARS("Castle Wars", AreaType.MINIGAMES, DeathType.SAFE_FOR_HCGIM, 9520, 9620),
+    MG_CLAN_WARS("Clan Wars", AreaType.MINIGAMES, DeathType.SAFE_FOR_HCGIM, 12621, 12622, 12623, 13130, 13131, 13133, 13134, 13135, 13386, 13387, 13390, 13641, 13642, 13643, 13644, 13645, 13646, 13647, 13899, 13900, 14155, 14156),
+    MG_PVP_ARENA("PvP Arena", AreaType.MINIGAMES, DeathType.SAFE_FOR_HCGIM, 13362, 13363),
     MG_FISHING_TRAWLER("Fishing Trawler", AreaType.MINIGAMES, 7499),
-    MG_FORTIS_COLOSSEUM("Fortis Colosseum", AreaType.MINIGAMES,SpecialEncounter.COLOSSEUM , 7216),
+    MG_FORTIS_COLOSSEUM("Fortis Colosseum", AreaType.MINIGAMES, 7216),
     MG_FORTIS_COLOSSEUM_LOBBY("Fortis Colosseum Lobby", AreaType.MINIGAMES, 7316),
-    MG_GAUNTLET("The Gauntlet", AreaType.MINIGAMES, SpecialEncounter.GAUNTLET, 12127, 7512),
-    MG_CORRUPTED_GAUNTLET("Corrupted Gauntlet", AreaType.MINIGAMES, SpecialEncounter.CG,7768),
+    MG_GAUNTLET("The Gauntlet", AreaType.MINIGAMES, 12127, 7512),
+    MG_CORRUPTED_GAUNTLET("Corrupted Gauntlet", AreaType.MINIGAMES, 7768),
     MG_GIANTS_FOUNDRY("Giants' Foundry", AreaType.MINIGAMES, 13491),
     MG_GUARDIANS_OF_THE_RIFT("Guardians of the Rift", AreaType.MINIGAMES, 14484),
     MG_HALLOWED_SEPULCHRE("Hallowed Sepulchre", AreaType.MINIGAMES, 8797, 9051, 9052, 9053, 9054, 9309, 9563, 9565, 9821, 10074, 10075, 10077),
-    MG_INFERNO("The Inferno", AreaType.MINIGAMES, SpecialEncounter.INFERNO, 9043),
+    MG_INFERNO("The Inferno", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM, 9043),
+    MG_JAD_CHALLENGES("Jad Challenges", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM),
     MG_KELDAGRIM_RAT_PITS("Keldagrim Rat Pits", AreaType.MINIGAMES, 7753),
-    MG_LAST_MAN_STANDING_DESERTED_ISLAND("LMS - Deserted Island", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 13658, 13659, 13660, 13914, 13915, 13916),
-    MG_LAST_MAN_STANDING_WILD_VARROCK("LMS - Wild Varrock", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 13918, 13919, 13920, 14174, 14175, 14176, 14430, 14431, 14432),
-    MG_MAGE_TRAINING_ARENA("Mage Training Arena", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 13462, 13463),
-    MG_NIGHTMARE_ZONE("Nightmare Zone", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 9033),
-    MG_PEST_CONTROL("Pest Control", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 10536),
+    MG_LAST_MAN_STANDING_DESERTED_ISLAND("LMS - Deserted Island", AreaType.MINIGAMES, DeathType.SAFE_FOR_HCGIM, 13658, 13659, 13660, 13914, 13915, 13916),
+    MG_LAST_MAN_STANDING_WILD_VARROCK("LMS - Wild Varrock", AreaType.MINIGAMES, DeathType.SAFE_FOR_HCGIM, 13918, 13919, 13920, 14174, 14175, 14176, 14430, 14431, 14432),
+    MG_MAGE_TRAINING_ARENA("Mage Training Arena", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM, 13462, 13463),
+    MG_NIGHTMARE_ZONE("Nightmare Zone", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM, 9033),
+    MG_PEST_CONTROL("Pest Control", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM, 10536),
     MG_PORT_SARIM_RAT_PITS("Port Sarim Rat Pits", AreaType.MINIGAMES, 11926),
     MG_PYRAMID_PLUNDER("Pyramid Plunder", AreaType.MINIGAMES, 7749),
     MG_ROGUES_DEN("Rogues' Den", AreaType.MINIGAMES, 11854, 11855, 12109, 12110, 12111),
     MG_SORCERESS_GARDEN("Sorceress's Garden", AreaType.MINIGAMES, 11605),
-    MG_SOUL_WARS("Soul Wars", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 8493, 8748, 8749, 9005),
+    MG_SOUL_WARS("Soul Wars", AreaType.MINIGAMES, DeathType.SAFE_FOR_HCGIM, 8493, 8748, 8749, 9005),
     MG_TEMPLE_TREKKING("Temple Trekking", AreaType.MINIGAMES, 8014, 8270, 8256, 8782, 9038, 9294, 9550, 9806),
     MG_TITHE_FARM("Tithe Farm", AreaType.MINIGAMES, 7222),
-    MG_TROUBLE_BREWING("Trouble Brewing", AreaType.MINIGAMES, 15150),
-    MG_TZHAAR_FIGHT_CAVES("Tzhaar Fight Caves", AreaType.MINIGAMES, SpecialEncounter.FIGHT_CAVES, 9551),
-    MG_TZHAAR_FIGHT_PITS("Tzhaar Fight Pits", AreaType.MINIGAMES, ApplicableDeathType.SAFE, 9552),
+    MG_TROUBLE_BREWING("Trouble Brewing", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM, 15150),
+    MG_TZHAAR_FIGHT_CAVES("TzHaar Fight Caves", AreaType.MINIGAMES, DeathType.SAFE_FOR_SOLO_HCIM, 9551),
+    MG_TZHAAR_FIGHT_PITS("TzHaar Fight Pits", AreaType.MINIGAMES, DeathType.SAFE_FOR_HCGIM, 9552),
     MG_VARROCK_RAT_PITS("Varrock Rat Pits", AreaType.MINIGAMES, 11599),
     MG_VOLCANIC_MINE("Volcanic Mine", AreaType.MINIGAMES, 15263, 15262),
 
     // Raids
-    RAIDS_CHAMBERS_OF_XERIC("Chambers of Xeric", AreaType.RAIDS, SpecialEncounter.COX, 12889, 13136, 13137, 13138, 13139, 13140, 13141, 13145, 13393, 13394, 13395, 13396, 13397, 13401),
-    RAIDS_THEATRE_OF_BLOOD("Theatre of Blood", AreaType.RAIDS, SpecialEncounter.TOB, 12611, 12612, 12613, 12867, 12869, 13122, 13123, 13125, 13379),
-    RAIDS_TOMBS_OF_AMASCUT("Tombs of Amascut", AreaType.RAIDS, SpecialEncounter.TOA, 14160, 14162, 14164, 14674, 14676, 15184, 15186, 15188, 15696, 15698, 15700),
+    RAIDS_CHAMBERS_OF_XERIC("Chambers of Xeric", AreaType.RAIDS, DeathType.SAFE_FOR_SOLO_HCIM, 12889, 13136, 13137, 13138, 13139, 13140, 13141, 13145, 13393, 13394, 13395, 13396, 13397, 13401),
+    RAIDS_THEATRE_OF_BLOOD("Theatre of Blood", AreaType.RAIDS, 12611, 12612, 12613, 12867, 12869, 13122, 13123, 13125, 13379),
+    RAIDS_TOMBS_OF_AMASCUT("Tombs of Amascut", AreaType.RAIDS, 14160, 14162, 14164, 14674, 14676, 15184, 15186, 15188, 15696, 15698, 15700),
     RAIDS_JALTEVAS_PYRAMID("Jaltevas Pyramid", AreaType.RAIDS, 13454),
     RAIDS_OSMUMTENS_BURIAL_CHAMBER("Osmumten's Burial Chamber", AreaType.RAIDS, 14672),
 
@@ -315,7 +318,7 @@ public enum Area
     REGION_AIR_ALTAR("Air Altar", AreaType.REGIONS, 11339),
     REGION_AL_KHARID_MINE("Al Kharid Mine", AreaType.REGIONS, 13107),
     REGION_ANCIENT_VAULT("Ancient Vault", AreaType.REGIONS, 12644, 13156),
-    REGION_APE_ATOLL("Ape Atoll" , AreaType.REGIONS, 10794, 10795, 10974, 11050),
+    REGION_APE_ATOLL("Ape Atoll", AreaType.REGIONS, 10794, 10795, 10974, 11050),
     REGION_ARANDAR("Arandar", AreaType.REGIONS, 9266, 9267, 9523),
     REGION_ASGARNIA("Asgarnia", AreaType.REGIONS, 11825, 11829, 11830, 12085, 12086),
     REGION_AVIUM_SAVANNAH("Avium Savannah", AreaType.REGIONS, 5935, 5936, 5937, 6189, 6445, 6446, 6447, 6701, 6702, 6703, 6957, 6958, 6959, 7215),
@@ -373,9 +376,9 @@ public enum Area
     REGION_ISAFDAR("Isafdar", AreaType.REGIONS, 8497, 8753, 8754, 9009, 9010),
     REGION_ISLAND_OF_STONE("Island of Stone", AreaType.REGIONS, 9790),
     REGION_ISLE_OF_SOULS("Isle of Souls", AreaType.REGIONS, 8236, 8237, 8238, 8491, 8492, 8494, 8747, 8750, 9003, 9004, 9006, 9260, 9261, 9262),
-    REGION_JIGGIG("Jiggig" , AreaType.REGIONS, 9775),
+    REGION_JIGGIG("Jiggig", AreaType.REGIONS, 9775),
     REGION_KANDARIN("Kandarin", AreaType.REGIONS, 9268, 9269, 9014, 9263, 9264, 9519, 9524, 9527, 9776, 9783, 10037, 10290, 10294, 10546, 10551, 10805, 11062),
-    REGION_KARAMJA("Karamja" , AreaType.REGIONS, 10801, 10802, 11054, 11311, 11312, 11313, 11566, 11567, 11568, 11569, 11822),
+    REGION_KARAMJA("Karamja", AreaType.REGIONS, 10801, 10802, 11054, 11311, 11312, 11313, 11566, 11567, 11568, 11569, 11822),
     REGION_KEBOS_LOWLANDS("Kebos Lowlands", AreaType.REGIONS, 4665, 4666, 4667, 4921, 5178),
     REGION_KEBOS_SWAMP("Kebos Swamp", AreaType.REGIONS, 4664, 4920, 5174, 5175, 5176, 5430, 5431),
     REGION_KHARAZI_JUNGLE("Kharazi Jungle", AreaType.REGIONS, 11053, 11309, 11565, 11821),
@@ -411,7 +414,7 @@ public enum Area
     REGION_OURANIA_HUNTER("Ourania Hunter Area", AreaType.REGIONS, 9778),
     REGION_PIRATES_COVE("Pirates' Cove", AreaType.REGIONS, 8763),
     REGION_PISCATORIS_HUNTER_AREA("Piscatoris Hunter Area", AreaType.REGIONS, 9015, 9016, 9271, 9272, 9528),
-    REGION_POH("Player Owned House", AreaType.REGIONS, ApplicableDeathType.SAFE, 7513, 7514, 7769, 7770),
+    REGION_POH("Player Owned House", AreaType.REGIONS, DeathType.SAFE_FOR_HCGIM, 7513, 7514, 7769, 7770),
     REGION_POISON_WASTE("Poison Waste", AreaType.REGIONS, 8752, 9008),
     REGION_PORT_TYRAS("Port Tyras", AreaType.REGIONS, 8496),
     REGION_PURO_PURO("Puro-Puro", AreaType.REGIONS, 10307),
@@ -422,7 +425,7 @@ public enum Area
     REGION_RUINS_OF_UNKAH("Ruins of Unkah", AreaType.REGIONS, 12588),
     REGION_RUINS_OF_ULLEK("Ruins of Ullek", AreaType.REGIONS, 13355, 13611, 13612),
     REGION_RUNE_ESSENCE_MINE("Rune Essence Mine", AreaType.REGIONS, 11595),
-    // The Beekeper, Pinball, and Gravedigger randoms share a region (7758), and although they are not technically ScapeRune, that name is most commonly
+    // The Beekeeper, Pinball, and Gravedigger randoms share a region (7758), and although they are not technically ScapeRune, that name is most commonly
     // associated with random events, so those three have been denoted ScapeRune to avoid leaving multiple random event regions without an assigned name.
     REGION_SCAPERUNE("ScapeRune", AreaType.REGIONS, 10058, 7758, 8261),
     REGION_SEA_SPIRIT_DOCK("Sea Spirit Dock", AreaType.REGIONS, 12332),
@@ -441,27 +444,28 @@ public enum Area
     REGION_TROLLWEISS_MTN("Trollweiss Mountain", AreaType.REGIONS, 11066, 11067, 11068),
     REGION_TUTORIAL_ISLAND("Tutorial Island", AreaType.REGIONS, 12079, 12080, 12335, 12336, 12436, 12592),
     REGION_UNDERWATER("Underwater", AreaType.REGIONS, 15008, 15264),
+    REGION_WILDERNESS("Wilderness", AreaType.REGIONS),
     REGION_WATER_ALTAR("Water Altar", AreaType.REGIONS, 10827),
     REGION_WATERBIRTH_ISLAND("Waterbirth Island", AreaType.REGIONS, 10042),
     REGION_WINTERTODT_CAMP("Wintertodt Camp", AreaType.REGIONS, 6461),
     REGION_WIZARDS_TOWER("Wizards' Tower", AreaType.REGIONS, 12337),
     REGION_WOODCUTTING_GUILD("Woodcutting Guild", AreaType.REGIONS, 6198, 6454),
-    REGION_WRATH_ALTAR("Wrath Altar", AreaType.REGIONS, 9291);
+    REGION_WRATH_ALTAR("Wrath Altar", AreaType.REGIONS, 9291),
+
+
+    // no regionIds, acts as fallback
+    UNKNOWN("Unknown Area", AreaType.UNKNOWN);
 
     private static final Map<Integer, Area> FROM_REGION;
 
-    static
-    {
+    static {
         ImmutableMap.Builder<Integer, Area> regionMapBuilder = new ImmutableMap.Builder<>();
-        for (Area area : Area.values())
-        {
-            if (area.getRegionIds() == null)
-            {
+        for (Area area : Area.values()) {
+            if (area.getRegionIds() == null) {
                 continue;
             }
 
-            for (int region : area.getRegionIds())
-            {
+            for (int region : area.getRegionIds()) {
                 regionMapBuilder.put(region, area);
             }
         }
@@ -478,42 +482,25 @@ public enum Area
     private final int[] regionIds;
 
 
-    final ApplicableDeathType deathType;
+    final DeathType deathType;
 
-
-    @Nullable
-    final
-    SpecialEncounter specialEncounter;
-
-    Area(String areaName, AreaType areaType, int... regionIds)
-    {
-        this.areaName = areaName;
-        this.areaType = areaType;
-        this.deathType = ApplicableDeathType.DANGEROUS;
-        this.specialEncounter = null;
-        this.regionIds = regionIds;
-    }
-
-    Area(String areaName, AreaType areaType, ApplicableDeathType deathType, int... regionIds) {
+    Area(String areaName,
+         AreaType areaType,
+         DeathType deathType,
+         int... regionIds) {
         this.areaName = areaName;
         this.areaType = areaType;
         this.deathType = deathType;
-        this.specialEncounter = null;
         this.regionIds = regionIds;
     }
 
-    Area(String areaName, AreaType areaType, @org.jetbrains.annotations.Nullable SpecialEncounter specialEncounter, int... regionIds) {
-        this.areaName = areaName;
-        this.areaType = areaType;
-        this.deathType = ApplicableDeathType.SPECIAL;
-        this.specialEncounter = specialEncounter;
-        this.regionIds = regionIds;
+    Area(String areaName, AreaType areaType, int... regions) {
+        this(areaName, areaType, DeathType.DANGEROUS, regions);
     }
 
-    public static Area fromRegion(final int regionId)
-    {
-        return FROM_REGION.get(regionId);
+    public static Area fromRegion(final int regionId) {
+        return FROM_REGION.getOrDefault(regionId, UNKNOWN);
     }
 }
 
-//Chore: Readjust add the necessary ApplicableDeathType and SpecialEncounter fields in the relevant Area constructors
+// To Do: Add all the latest new areas

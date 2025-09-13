@@ -21,13 +21,17 @@ dependencies {
 
 	compileOnly 'org.projectlombok:lombok:1.18.30'
 	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+	implementation 'org.jetbrains:annotations:23.0.0'
 
-	testImplementation 'junit:junit:4.12'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+
 	testImplementation group: 'net.runelite', name:'client', version: runeLiteVersion
 	testImplementation group: 'net.runelite', name:'jshell', version: runeLiteVersion
+}
 
-	implementation 'org.jetbrains:annotations:23.0.0'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+test {
+	useJUnitPlatform()
 }
 
 group = 'com.example'
@@ -63,7 +67,4 @@ tasks.register('shadowJar', Jar) {
 	group = BasePlugin.BUILD_GROUP
 	archiveClassifier.set('shadow')
 	archiveFileName.set("${rootProject.name}-${project.version}-all.jar")
-}
-kotlin {
-    jvmToolchain(11)
 }
