@@ -1,13 +1,10 @@
 package com.streamerbot;
 
-import com.streamerbot.domain.SpecialEncounter;
+import com.streamerbot.domain.*;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.ConfigSection;
-
-import java.util.EnumSet;
-import java.util.Set;
 
 @ConfigGroup("streamerbot")
 public interface StreamerbotConfig extends Config
@@ -76,39 +73,39 @@ public interface StreamerbotConfig extends Config
 		return "";
 	}
 
-	@ConfigItem(
-			keyName = "ignoredSpecialEncounters",
-			name = "Ignore selected",
-			description = "Individual raids and miscellaneous PvM encounters where death should be ignored. <br/>" +
-					"Hold Control while clicking on the options to select multiple encounters to ignore.",
-			position = 5,
-			section = deathSection
-	)
-	default Set<SpecialEncounter> ignoredSpecialEncounters() {
-		return EnumSet.noneOf(SpecialEncounter.class);
-	}
 
-	@ConfigItem(
-			keyName = "ignoreSafeDeath",
-			name = "Ignore other safe deaths",
-			description = "Ignore all safe deaths excluded in the list above. <br/>" +
-			"This follows the rule of safe deaths for solo hardcore ironman accounts.",
-			position = 6,
-			section = deathSection
-	)
-	default boolean ignoreSafeDeath() {
-		return false;
-	}
+    @ConfigItem(
+            keyName = "ignoreSafeDeathPolicy",
+            name = "Ignore",
+            description = "The type of safe deaths that should be ignored",
+            position = 5,
+            section = deathSection
+    )
+
+    default IgnoreSafeDeathPolicy ignoreSafeDeathPolicy() {
+        return IgnoreSafeDeathPolicy.NONE;
+    }
 
 	@ConfigItem(
 			keyName = "ignoreResurrection",
 			name = "Ignore resurrections",
 			description = "Do not send a death trigger upon undergoing the Karamja Elite Diary resurrection in the Fight Caves <br/>" +
 					"and Western Elite Diary resurrection at Zulrah.",
-			position = 7,
+			position = 6,
 			section = deathSection
 	)
 	default boolean ignoreResurrection() {
-		return true;
+		return false;
+	}
+
+	@ConfigItem(
+			keyName = "ignorePvp",
+			name = "Ignore PvP deaths",
+			description ="Do not send a trigger upon death by another player",
+			position = 7,
+			section = deathSection
+	)
+	default boolean ignorePvp() {
+		return false;
 	}
 }

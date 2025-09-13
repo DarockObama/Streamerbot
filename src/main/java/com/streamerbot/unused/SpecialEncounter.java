@@ -1,4 +1,4 @@
-package com.streamerbot.domain;
+package com.streamerbot.unused;
 
 import lombok.RequiredArgsConstructor;
 
